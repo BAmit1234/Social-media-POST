@@ -1,0 +1,32 @@
+<div>POST</div>
+<table border =1>
+{% for data in userDetails %}
+<tr>
+<td>{{data[2]}}</td>
+<td> {{data[1]}}</a></td>
+<td><a href="/users/post/{{data[0]}}" >Update</a></td>
+</tr>
+{% endfor %}
+</table>
+<div>Comments</div>
+<table border =1>
+{% for data in userDetail %}
+<tr>
+
+{% for data1 in userDetails %}
+<td>USER{{data1[0]}}</td>
+<td> {{data[1]}}</a></td>
+<td><a href="/users/comment/{{data1[0]}}/{{data[0]}}" >Update</a></td>
+<td><a href="/users/remove/{{data1[0]}}/{{data[0]}}" >Delete</a></td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+<form method='POST' action="">
+
+
+comment <input type="text" name="text"/> 
+<br>
+<input type="Submit">
+</form>

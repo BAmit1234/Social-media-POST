@@ -1,0 +1,17 @@
+<form method='POST' action="">
+<h1>POST<h1>
+
+<textarea  type="text"name="text" rows="4" cols="50">
+</textarea>
+<br>
+<input type="Submit">
+</form>	
+<table border =1>
+{% for data in userDetails %}
+<tr>
+<td>{{data[2]}}</td>
+<td><a href="/users/{{data[0]}}" >{{data[1]}}</a></td>
+
+</tr>
+{% endfor %}
+</table>
